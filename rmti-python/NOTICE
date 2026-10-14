@@ -1,0 +1,32 @@
+RMTI Time-Indexed -- rmti-python
+Copyright 2026 Cesar Marolla
+
+This product includes software originally developed by Cesar Marolla
+(ORCID: https://orcid.org/0000-0001-8498-7380), first created for ENVR E-241
+"Risk by Design," Harvard University, Division of Continuing Education.
+
+RMTI-Py, the Python reference implementation of the Risk Mechanism Theory Index,
+including the time-indexed dynamic layer.
+
+Earlier RMTI records this work is derived from (concept DOIs):
+  - Python reference implementation: https://doi.org/10.5281/zenodo.21445892
+    (github.com/drmarolla/Risk-Mechanism-Theory-Index-RMTI-)
+  - Oncology sandbox: https://doi.org/10.5281/zenodo.22909090
+    (github.com/drmarolla/rmti-oncology-sandbox)
+  - Disaster-science sandbox: https://doi.org/10.5281/zenodo.22909081
+    (github.com/drmarolla/rmti-disaster-science-sandbox)
+
+Source: https://github.com/drmarolla/RMTI-time-indexed
+Software citation: see CITATION.cff. A DOI for this version is assigned by Zenodo
+when the release is published; it is not yet known.
+
+Educational and research use only. Research prototype: the time-indexed
+(trajectory) layer is uncalibrated and has not been validated against real
+outcomes. Not a medical device; not clinically validated; not a substitute
+for clinical judgment or for professionally validated hazard and risk
+assessments. An independent academic tool; not an official product of the
+World Bank Group or any other institution. See DISCLAIMER.md.
+
+Licensed under the Apache License, Version 2.0 (see LICENSE). This NOTICE
+file is provided for informational and attribution purposes per Apache
+License 2.0 Section 4(d); it does not itself modify the License.

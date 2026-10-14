@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>RMTI — Risk Mechanism Theory Index (Time-Indexed)</title>
+<meta name="description" content="Interactive sandboxes for the Risk Mechanism Theory Index: oncology and public-health surveillance, and disaster science. Research prototype.">
+<style>
+  :root{
+    --ink:#182420; --forest:#1c4b3a; --forest-dark:#123128; --gold:#c99a2e; --maroon:#7a2419;
+    --paper:#fbfaf5; --card:#ffffff; --panel:#eef1ea; --line:#dbd8cb; --muted:#5c6b62;
+    --font-sans: system-ui,-apple-system,'Segoe UI',Roboto,Helvetica,Arial,sans-serif;
+    --font-serif: ui-serif,Georgia,Cambria,'Times New Roman',Times,serif;
+    --font-mono: ui-monospace,SFMono-Regular,Menlo,Consolas,'Liberation Mono',monospace;
+  }
+  *{box-sizing:border-box;}
+  html{height:100%;}
+  body{margin:0;min-height:100%;background:var(--paper);color:var(--ink);font-family:var(--font-sans);line-height:1.55;
+       padding:env(safe-area-inset-top,0) env(safe-area-inset-right,0) env(safe-area-inset-bottom,0) env(safe-area-inset-left,0);}
+  .wrap{max-width:880px;margin:0 auto;padding:44px 22px 36px;}
+  h1{font-family:var(--font-serif);font-size:clamp(28px,5vw,40px);line-height:1.15;margin:0 0 6px;color:var(--forest-dark);font-weight:700;}
+  .sub{margin:0;color:var(--muted);font-size:15px;}
+  .eq{font-family:var(--font-serif);font-size:clamp(34px,8vw,64px);letter-spacing:.01em;margin:34px 0 4px;color:var(--ink);
+      border-top:3px solid var(--gold);padding-top:22px;}
+  .eq i{font-style:italic;}
+  .legend{font-size:14px;color:var(--muted);margin:0 0 30px;max-width:62ch;}
+  .legend b{color:var(--forest);font-weight:600;}
+  .cards{display:grid;grid-template-columns:repeat(auto-fit,minmax(290px,1fr));gap:16px;}
+  a.card{display:block;background:var(--card);border:1px solid var(--line);border-left:5px solid var(--forest);border-radius:12px;padding:20px 22px;
+         text-decoration:none;color:inherit;transition:box-shadow .15s,transform .15s,border-color .15s;}
+  a.card.disaster{border-left-color:var(--maroon);}
+  a.card:hover,a.card:focus-visible{box-shadow:0 6px 20px rgba(24,36,32,.12);transform:translateY(-2px);outline:none;}
+  a.card:focus-visible{outline:3px solid var(--gold);outline-offset:2px;}
+  a.card h2{font-family:var(--font-serif);font-size:22px;margin:0 0 6px;color:var(--forest-dark);}
+  a.card.disaster h2{color:var(--maroon);}
+  a.card p{margin:0 0 12px;font-size:14.5px;color:var(--ink);}
+  a.card .go{font-size:13.5px;font-weight:600;color:var(--forest);}
+  a.card.disaster .go{color:var(--maroon);}
+  .what{margin:30px 0 0;padding:16px 20px;background:var(--panel);border:1px solid var(--line);border-radius:12px;font-size:14.5px;}
+  .what b{color:var(--forest-dark);}
+  .links{display:flex;flex-wrap:wrap;gap:8px 20px;margin:26px 0 0;font-size:14px;}
+  .links a{color:var(--forest);font-weight:600;text-decoration:none;border-bottom:1px solid var(--line);}
+  .links a:hover{border-bottom-color:var(--forest);}
+  footer{margin-top:34px;padding-top:16px;border-top:1px solid var(--line);font-size:12.5px;color:var(--muted);}
+  footer b{color:var(--maroon);}
+</style>
+</head>
+<body>
+<div class="wrap">
+  <h1>Risk Mechanism Theory Index</h1>
+  <p class="sub">Time-indexed edition &middot; v2.3.0 &middot; research prototype</p>
+
+  <div class="eq" aria-label="R equals L times E times V times one minus rho"><i>R</i> = <i>L</i> &middot; <i>E</i> &middot; <i>V</i> &middot; (1 &minus; <i>&rho;</i>)</div>
+  <p class="legend"><b>L</b> likelihood, <b>E</b> exposure, <b>V</b> vulnerability, <b>&rho;</b> resilience. One decision-ready score on a fixed five-tier scale, now followed across review cycles as V(t) and &rho;(t).</p>
+
+  <div class="cards">
+    <a class="card" href="oncology/">
+      <h2>Oncology &amp; public health</h2>
+      <p>Hepatocellular-carcinoma surveillance triage and public-health surveillance, with an experimental trajectory panel.</p>
+      <span class="go">Open the sandbox &rarr;</span>
+    </a>
+    <a class="card disaster" href="disaster/">
+      <h2>Disaster science</h2>
+      <p>Urban, infrastructure and disaster-risk assessment, with worked city and wildfire examples and a trajectory panel.</p>
+      <span class="go">Open the sandbox &rarr;</span>
+    </a>
+  </div>
+
+  <p class="what"><b>Runs in your browser.</b> Nothing you type is uploaded. The trajectory panels use uncalibrated placeholder parameters and synthetic examples, and have not been validated against real outcomes.</p>
+
+  <nav class="links" aria-label="Project links">
+    <a href="https://github.com/drmarolla/RMTI-time-indexed">Source on GitHub</a>
+    <a href="https://github.com/drmarolla/RMTI-time-indexed/tree/main/calculators">Excel calculators</a>
+    <a href="https://github.com/drmarolla/RMTI-time-indexed/tree/main/rmti-python">Python package</a>
+    <a href="https://github.com/drmarolla/RMTI-time-indexed/blob/main/docs/TRAJECTORY_GUIDE.md">Trajectory guide</a>
+    <a href="https://github.com/drmarolla/RMTI-time-indexed/blob/main/DISCLAIMER.md">Disclaimer</a>
+    <a href="https://github.com/drmarolla/RMTI-time-indexed/blob/main/LICENSE">Apache 2.0 licence</a>
+  </nav>
+
+  <footer>
+    &copy; 2026 Cesar Marolla. Apache License 2.0. Educational and research use only. <b>Not a medical device</b>, not clinically validated, not a professionally validated hazard assessment; not for patient-care decisions. Do not enter identifying information. Independent academic work, not an official product of any institution.
+  </footer>
+</div>
+</body>
+</html>

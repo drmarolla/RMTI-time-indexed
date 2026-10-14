@@ -1,0 +1,136 @@
+RMTI reproduction report -- core v2.3.0
+======================================================================
+SECTION 1. Disaster / climate cohort
+======================================================================
+======================================================================
+PART 1 -- VALIDATED CORE: eight-asset cohort, ranked for capital sequencing
+======================================================================
+Lagos              (Nigeria   ) priority=1  IR=0.468  R_now=0.374 [Tier 4 - Severe]  R_after=0.211  reduction=43.8%  IEI=0.972  EAL_now=0.720  equity/1M=0.0450
+Lilongwe           (Malawi    ) priority=2  IR=0.560  R_now=0.420 [Tier 4 - Severe]  R_after=0.291  reduction=30.7%  IEI=0.59  EAL_now=0.492  equity/1M=0.4474
+Bamako             (Mali      ) priority=3  IR=0.510  R_now=0.408 [Tier 4 - Severe]  R_after=0.214  reduction=47.5%  IEI=1.131  EAL_now=0.480  equity/1M=0.1067
+Nairobi            (Kenya     ) priority=1  IR=0.436  R_now=0.196 [Tier 3 - High]  R_after=0.152  reduction=22.2%  IEI=0.635  EAL_now=0.304  equity/1M=0.0646
+Dar es Salaam      (Tanzania  ) priority=2  IR=0.617  R_now=0.277 [Tier 3 - High]  R_after=0.185  reduction=33.3%  IEI=1.111  EAL_now=0.287  equity/1M=0.0388
+Altadena           (USA       ) priority=3  IR=0.192  R_now=0.154 [Tier 3 - High]  R_after=0.125  reduction=18.8%  IEI=0.288  EAL_now=0.240  equity/1M=10.4348
+Lusaka             (Zambia    ) priority=4  IR=0.490  R_now=0.269 [Tier 3 - High]  R_after=0.196  reduction=27.3%  IEI=0.682  EAL_now=0.220  equity/1M=0.0655
+Pacific Palisades  (USA       ) priority=1  IR=0.144  R_now=0.115 [Tier 2 - Moderate]  R_after=0.094  reduction=18.8%  IEI=0.288  EAL_now=0.240  equity/1M=11.2676
+
+======================================================================
+SELF-CHECK -- reproduce the paper's own reported figures exactly (Tables 4-6) and the RMTI Calculator workbook
+======================================================================
+  Bamako          R_now    expected=0.408  got=0.408  OK
+  Bamako          R_after  expected=0.214  got=0.214  OK
+  Lagos           R_now    expected=0.374  got=0.374  OK
+  Lagos           R_after  expected=0.211  got=0.211  OK
+  Lilongwe        R_now    expected=0.42   got=0.42   OK
+  Lilongwe        R_after  expected=0.291  got=0.291  OK
+  Nairobi         R_now    expected=0.196  got=0.196  OK
+  Nairobi         R_after  expected=0.152  got=0.152  OK
+  Dar es Salaam   R_now    expected=0.277  got=0.277  OK
+  Dar es Salaam   R_after  expected=0.185  got=0.185  OK
+  Dar es Salaam   IEI      expected=1.111  got=1.111  OK
+  Lusaka          R_now    expected=0.269  got=0.269  OK
+  Lusaka          R_after  expected=0.196  got=0.196  OK
+  Pacific Palisades R_now    expected=0.115  got=0.115  OK
+  Pacific Palisades R_after  expected=0.094  got=0.094  OK
+  Altadena        R_now    expected=0.154  got=0.154  OK
+  Altadena        R_after  expected=0.125  got=0.125  OK
+
+All checks passed: True
+
+======================================================================
+PART 2 -- GENERALIZED MULTI-HAZARD / MULTI-CATEGORY EXTENSION (Eq. 3 & 5)
+======================================================================
+{
+  "R": 0.578,
+  "tier": "Tier 4 - Severe",
+  "posture": "Priority capital; act now",
+  "EAL": 1.179,
+  "N": 16000000,
+  "E_log_advisory": 0.985,
+  "equity_per_1M": 0.0737
+}
+
+Per hazard x category breakdown:
+  coastal flood            social         w=0.40 term=0.1613
+  coastal flood            economic       w=0.30 term=0.0911
+  coastal flood            environmental  w=0.30 term=0.0983
+  pluvial (drainage) flood social         w=0.40 term=0.0916
+  pluvial (drainage) flood economic       w=0.30 term=0.0580
+  pluvial (drainage) flood environmental  w=0.30 term=0.0780
+
+Multi-hazard self-check passed: True
+
+======================================================================
+SECTION 2. HCC oncology cohorts
+======================================================================
+======================================================================
+PART 1 -- six published cohorts (manuscript Table 2)
+======================================================================
+1. Untreated HBV            R_now=0.312 [3 High]  R_after=0.191 [3 High]  reduction=38.9%  EAL_now=0.810
+1. Active viral cirrhosis   R_now=0.102 [2 Moderate]  R_after=0.071 [2 Moderate]  reduction=30.0%  EAL_now=0.275
+2. Alcohol cirrhosis        R_now=0.094 [2 Moderate]  R_after=0.059 [2 Moderate]  reduction=37.5%  EAL_now=0.240
+3. Cured-HCV cirrhosis      R_now=0.058 [2 Moderate]  R_after=0.032 [1 Low]  reduction=43.8%  EAL_now=0.200
+1. Suppressed-HBV           R_now=0.040 [1 Low]  R_after=0.022 [1 Low]  reduction=43.8%  EAL_now=0.160
+2. NAFLD cirrhosis          R_now=0.038 [1 Low]  R_after=0.024 [1 Low]  reduction=37.5%  EAL_now=0.120
+
+======================================================================
+SELF-CHECK -- reproduce the manuscript's own Table 2 exactly
+======================================================================
+  Untreated HBV            R_now    expected=0.312  got=0.312  OK
+  Untreated HBV            R_after  expected=0.191  got=0.191  OK
+  Active viral cirrhosis   R_now    expected=0.102  got=0.102  OK
+  Active viral cirrhosis   R_after  expected=0.071  got=0.071  OK
+  Alcohol cirrhosis        R_now    expected=0.094  got=0.094  OK
+  Alcohol cirrhosis        R_after  expected=0.059  got=0.059  OK
+  Cured-HCV cirrhosis      R_now    expected=0.058  got=0.058  OK
+  Cured-HCV cirrhosis      R_after  expected=0.032  got=0.032  OK
+  Suppressed-HBV           R_now    expected=0.04   got=0.04   OK
+  Suppressed-HBV           R_after  expected=0.022  got=0.022  OK
+  NAFLD cirrhosis          R_now    expected=0.038  got=0.038  OK
+  NAFLD cirrhosis          R_after  expected=0.024  got=0.024  OK
+
+All checks passed: True
+(This is the case that the archived v1.0.0 float-round() bug got wrong: Alcohol cirrhosis R_after is exactly 0.0585 in decimal, which must round to 0.059, not 0.058.)
+
+======================================================================
+PART 2 -- six Pearl-protocol aetiologies (manuscript Table 3)
+======================================================================
+1. High-burden MASLD                R_usual=0.156 [3 High]  R_optimised=0.068 [2 Moderate]  reduction=56.3%
+1. Active viral (Pearl)             R_usual=0.132 [2 Moderate]  R_optimised=0.058 [2 Moderate]  reduction=56.3%
+2. Alcohol cirrhosis (Pearl)        R_usual=0.072 [2 Moderate]  R_optimised=0.032 [1 Low]  reduction=56.3%
+3. HCV post-SVR                     R_usual=0.060 [2 Moderate]  R_optimised=0.026 [1 Low]  reduction=56.3%
+1. Suppressed HBV                   R_usual=0.048 [1 Low]  R_optimised=0.021 [1 Low]  reduction=56.3%
+2. MASLD cirrhosis (compensated)    R_usual=0.036 [1 Low]  R_optimised=0.016 [1 Low]  reduction=56.3%
+
+======================================================================
+PART 3 -- within-tier EAL priority worked example (Sec. 2.6)
+======================================================================
+Patient A (post-SVR, curable if missed):    R=0.072 (2 Moderate)  inherent=0.090  EAL=0.072
+Patient B (marginal reserve, fatal if missed): R=0.066 (2 Moderate)  inherent=0.083  EAL=0.200
+R ranks A>B ; EAL ranks B>A  -> EAL reverses within-tier priority
+
+======================================================================
+PART 4 -- ALBI cohort-mean Vulnerability (Faria et al. dataset)
+======================================================================
+  HCC cohort (n=29)       mean V = 0.5224  (manuscript reports 0.52)
+  Cirrhosis cohort (n=25) mean V = 0.48  (manuscript reports 0.48)
+
+======================================================================
+SECTION 3. Time-indexed trajectory examples (synthetic)
+======================================================================
+steady-state gains (q_level 0.05, q_slope 0.01, r_obs 0.8): alpha = 0.4149, beta = 0.0855  (workbook: 0.41, 0.09)
+fixed inputs: L = 0.30, E = 0.65, C = 3, rho(0) = 0.20; HCC parameters
+
+T-A (AL falling, adherence rising)
+  t   AL  adh    rho   V*(on)  R(off)   R(on)   tier(on)
+  0   2  0.40  0.200  0.5167  0.0806  0.0806   Tier 2 - Moderate
+  1   1  0.55  0.350  0.4750  0.0549  0.0602   Tier 2 - Moderate
+  2   1  0.70  0.500  0.4467  0.0423  0.0435   Tier 1 - Low
+  3   0  0.75  0.550  0.3871  0.0307  0.0340   Tier 1 - Low
+
+T-B (AL rising, adherence flat)
+  t   AL  adh    rho   V*(on)  R(off)   R(on)   tier(on)
+  0   2  0.40  0.200  0.5167  0.0806  0.0806   Tier 2 - Moderate
+  1   3  0.40  0.200  0.5583  0.0936  0.0871   Tier 2 - Moderate
+  2   4  0.35  0.150  0.6283  0.1133  0.1041   Tier 2 - Moderate
+  3   5  0.35  0.150  0.7162  0.1271  0.1187   Tier 2 - Moderate

@@ -1,0 +1,51 @@
+cff-version: 1.2.0
+message: "If you use this software, please cite it using the metadata below."
+title: "RMTI-Py Time-Indexed: Python Reference Implementation of the Risk Mechanism Theory Index"
+version: 2.3.0
+date-released: "2026-10-12"
+authors:
+  - family-names: Marolla
+    given-names: Cesar
+    orcid: "https://orcid.org/0000-0001-8498-7380"
+repository-code: "https://github.com/drmarolla/RMTI-time-indexed"
+license: Apache-2.0
+# doi: add the concept DOI here after the first Zenodo release (not yet assigned)
+keywords:
+  - Risk Mechanism Theory Index
+  - RMTI
+  - time-indexed risk
+  - risk trajectory
+  - state-space filter
+  - hepatocellular carcinoma
+  - allostatic load
+  - disaster risk reduction
+  - expected annual loss
+  - research prototype
+abstract: >
+  Time-indexed (trajectory) extension of the Risk Mechanism Theory Index (RMTI). Adds a filtered V(t) and rho(t) layer on top of the unchanged RMTI core, R = L*E*V*(1-rho), with a Python reference implementation, Excel calculators and interactive sandboxes for oncology (HCC surveillance) and disaster science. Research prototype: parameters are uncalibrated and the method has not been validated against real outcomes.
+references:
+  - type: software
+    authors: [{family-names: Marolla, given-names: Cesar}]
+    title: "RMTI: Risk Mechanism Theory Index — Reference Implementation (Urban Infrastructure and Oncology Applications)"
+    repository-code: "https://github.com/drmarolla/Risk-Mechanism-Theory-Index-RMTI-"
+    doi: 10.5281/zenodo.21445892
+    version: "2.1.0"
+  - type: software
+    authors: [{family-names: Marolla, given-names: Cesar}]
+    title: "RMTI Sandbox — Oncology and Public Health Surveillance"
+    repository-code: "https://github.com/drmarolla/rmti-oncology-sandbox"
+    doi: 10.5281/zenodo.22909090
+  - type: software
+    authors: [{family-names: Marolla, given-names: Cesar}]
+    title: "RMTI Sandbox — Disaster Science"
+    repository-code: "https://github.com/drmarolla/rmti-disaster-science-sandbox"
+    doi: 10.5281/zenodo.22909081
+  - type: article
+    authors: [{family-names: Marolla, given-names: Cesar}]
+    title: "Enhancing urban resilience to California wildfires: A systemic risk mechanism design and theory framework for a comprehensive risk assessment"
+    journal: "International Journal of Management and Data Analytics"
+    volume: 5
+    issue: 1
+    start: 60
+    end: 77
+    year: 2025

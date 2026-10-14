@@ -1,0 +1,34 @@
+cff-version: 1.2.0
+message: "If you use this note or software, please cite it using the metadata below."
+title: "Oncoclastics: a terminology note"
+version: 1.0.0
+date-released: "2026-10-12"
+authors:
+  - family-names: Marolla
+    given-names: Cesar
+    orcid: "https://orcid.org/0000-0001-8498-7380"
+repository-code: "https://github.com/drmarolla/RMTI-time-indexed"
+license: Apache-2.0
+# DOI: to be entered by hand after the Zenodo record exists (tools/set_doi.py does not cover this folder)
+keywords:
+  - oncoclastics
+  - Risk Mechanism Theory Index
+  - RMTI
+  - disaster risk reduction
+  - cancer surveillance
+  - hepatocellular carcinoma
+  - allostatic load
+  - terminology
+  - research framework
+abstract: >
+  Definition note for the term oncoclastics: the application of hazard-exposure-vulnerability-resilience
+  assessment, as developed in disaster-risk reduction, to the fragmentation of cancer-related trajectories,
+  in two senses (biological and care-system). Maps the Risk Mechanism Theory Index (RMTI) domains onto both
+  senses and includes a small tested Python module that scores them through the unchanged RMTI core.
+  Research framework: not validated against real outcomes; not a medical device.
+references:
+  - type: software
+    authors: [{family-names: Marolla, given-names: Cesar}]
+    title: "RMTI Time-Indexed"
+    repository-code: "https://github.com/drmarolla/RMTI-time-indexed"
+    version: "2.3.0"
